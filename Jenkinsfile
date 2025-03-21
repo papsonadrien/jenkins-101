@@ -4,6 +4,9 @@ pipeline {
             label 'docker-agent-python'
             }
       }
+    triggers {
+        '*/5 * * * *'
+    }
     stages {
         stage('Build') {
             steps {
